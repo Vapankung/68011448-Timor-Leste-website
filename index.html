@@ -1,264 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#0f172a">
-  <title>Explore Timor Leste</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore the people, culture and landscapes of Timor-Leste in an interactive Asian Studies guide.">
+  <title>Timor-Leste · An Island Guide</title>
   <link rel="stylesheet" href="style.css">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="script.js" defer></script>
 </head>
-
-<body class="antialiased selection:bg-red-500 selection:text-white">
-
-  <header class="hero-section relative h-[85vh] min-h-[600px] flex items-center justify-center overflow-hidden">
-    <div class="absolute inset-0 bg-black/40 z-10"></div>
-    <div class="text-center z-20 px-4 max-w-5xl">
-      <span
-        class="eyebrow mb-6 inline-block text-white/90 uppercase tracking-[0.2em] text-sm font-semibold border border-white/30 px-4 py-1.5 rounded-full backdrop-blur-sm">Discover
-        Southeast Asia</span>
-      <h1 class="text-6xl md:text-8xl font-extrabold tracking-tight mb-4 text-white drop-shadow-xl">
-        Explore <br />
-        <span
-          class="bg-gradient-to-r from-red-500 via-yellow-400 to-red-500 bg-clip-text text-transparent bg-300% animate-gradient">Timor
-          Leste</span>
-      </h1>
-      <p class="text-lg md:text-2xl font-light text-slate-200 max-w-2xl mx-auto mt-6 leading-relaxed">
-        A vibrant land of untold history, resilient culture, and breathtaking natural innovation.
-      </p>
-      <div class="mt-10">
-        <a href="#about" class="btn-primary">Start Exploring</a>
-      </div>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="#top"><img src="img/Flag_of_East_Timor.svg.png" width="32" height="22" alt=""> Timor-Leste</a>
+      <nav aria-label="Main navigation"><a class="" href="#explore">Explore</a><a class="" href="#Map">Map</a><a class="" href="#quiz">Quiz</a></nav>
+      <button id="theme-toggle" class="js-only theme-toggle" type="button" aria-label="Dark mode" aria-pressed="false"><span aria-hidden="true">◐</span></button>
     </div>
-    <div class="absolute bottom-0 left-0 w-full h-32 hero-fog z-10"></div>
   </header>
 
-  <nav class="site-nav sticky top-0 backdrop-blur-lg shadow-sm z-50 transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
-
-      <button id="nav-left"
-        class="hidden md:flex items-center justify-center flex-shrink-0 w-8 h-8 mr-4 rounded-full bg-slate-200/50 dark:bg-slate-700/50 text-slate-600 dark:text-slate-300 hover:bg-red-500 hover:text-white transition-all cursor-pointer">
-        &#10094;
-      </button>
-
-      <ul id="nav-list"
-        class="flex overflow-x-auto gap-6 items-center snap-x hide-scrollbar text-sm font-bold text-slate-500 uppercase tracking-wider w-full scroll-smooth">
-        <li class="snap-start shrink-0"><a href="#about" class="nav-link">About</a></li>
-        <li class="snap-start shrink-0"><a href="#overview" class="nav-link">Overview</a></li>
-        <li class="snap-start shrink-0"><a href="#population" class="nav-link">Population</a></li>
-        <li class="snap-start shrink-0"><a href="#political" class="nav-link">Politics</a></li>
-        <li class="snap-start shrink-0"><a href="#communication" class="nav-link">Comm</a></li>
-        <li class="snap-start shrink-0"><a href="#language" class="nav-link">Language</a></li>
-        <li class="snap-start shrink-0"><a href="#sport" class="nav-link">Sport</a></li>
-        <li class="snap-start shrink-0"><a href="#entertainment" class="nav-link">Entertainment</a></li>
-        <li class="snap-start shrink-0"><a href="#personality" class="nav-link">Personality</a></li>
-        <li class="snap-start shrink-0"><a href="#festival" class="nav-link">Festival</a></li>
-        <li class="snap-start shrink-0"><a href="#environment" class="nav-link">Environment</a></li>
-        <li class="snap-start shrink-0"><a href="#Map" class="nav-link text-red-600">Map</a></li>
-      </ul>
-
-      <button id="nav-right"
-        class="hidden md:flex items-center justify-center flex-shrink-0 w-8 h-8 ml-4 rounded-full bg-slate-200/50 dark:bg-slate-700/50 text-slate-600 dark:text-slate-300 hover:bg-red-500 hover:text-white transition-all cursor-pointer">
-        &#10095;
-      </button>
-
-      <div class="flex-shrink-0 ml-4 pl-4 border-l border-slate-300 dark:border-slate-700 flex items-center">
-        <label class="theme-switch relative inline-block w-12 h-6 cursor-pointer m-0">
-          <input type="checkbox" id="theme-checkbox" class="sr-only">
-          <span
-            class="slider round block absolute inset-0 bg-slate-300 rounded-full transition-all duration-400"></span>
-        </label>
-      </div>
-
-    </div>
-  </nav>
-
-  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-16">
-
-    <section id="about" class="topic-card group">
-      <h2 class="card-heading">About Timor Leste</h2>
-      <div class="img-wrapper">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_East_Timor_%283-2%29.svg/250px-Flag_of_East_Timor_%283-2%29.svg.png"
-          alt="Flag of Timor Leste" loading="lazy">
-      </div>
-      <div class="text-content">
-        <p>Timor Leste, the eastern half of the island of Timor, is a Southeast Asian nation known for its rich cultural
-          heritage, stunning landscapes, and resilient spirit. It is home to diverse communities and has a unique
-          history shaped by colonial influences and independence struggles. The country is also recognized for its
-          natural beauty, including pristine beaches and lush forests.</p>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="shell hero-inner">
+        <p class="eyebrow"><span class="signal"></span> Southeast Asia / Island guide</p>
+        <h1 id="hero-title">Timor<span>-</span><wbr>Leste<span>.</span></h1>
+        <p class="hero-copy">From the rhythms of Likurai to the coast of Dili, explore the people, traditions and landscapes of Timor-Leste.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#explore">Explore chapters <span aria-hidden="true">↓</span></a>
+          <a class="button ghost" href="#Map">Find it on the map <span aria-hidden="true">↗</span></a>
+        </div>
       </div>
     </section>
+    <dl class="shell facts">
+      <div><dt>Capital</dt><dd>Dili</dd></div>
+      <div><dt>Official languages</dt><dd>Tetum &amp; Portuguese</dd></div>
+      <div><dt>Independence restored</dt><dd>20 May 2002</dd></div>
+    </dl>
 
-    <section id="overview" class="topic-card group has-video">
-      <h2 class="card-heading">Timor Leste Overview</h2>
-      <div class="img-wrapper">
-        <img src="https://www.smartraveller.gov.au/sites/default/files/2025-06/timor-leste_250600.jpg"
-          alt="Heritage of Timor Leste" loading="lazy">
+    <section id="explore" class="shell section" aria-labelledby="explore-title">
+      <div class="section-head">
+        <p class="eyebrow">01 / The chapters</p>
+        <h2 id="explore-title">Get to know<br>Timor-Leste.</h2>
+        <p>Pick a topic to read a chapter, browse photos or watch a video.</p>
       </div>
-      <div class="video-wrapper">
-        <iframe src="https://www.youtube.com/embed/LUOXkks3Qz0" title="Timor Leste overview video" loading="lazy"
-          allowfullscreen></iframe>
+      <div class="filter-bar js-only">
+        <div class="filters" role="group" aria-label="Filter chapters">
+          <button type="button" data-filter="All" aria-pressed="true">All chapters</button>
+          <button type="button" data-filter="Country" aria-pressed="false">Country</button>
+          <button type="button" data-filter="Culture" aria-pressed="false">Culture</button>
+          <button type="button" data-filter="Nature" aria-pressed="false">Nature</button>
+        </div>
+        <p id="chapter-count" role="status">11 chapters</p>
       </div>
-      <div class="text-content">
-        <p>Timor-Leste, also known as East Timor, is a small Southeast Asian nation located on the eastern half of Timor
+      <div class="topic-grid">
+        <article id="about" class="topic" data-group="Country">
+        <img class="topic-image" src="img/Flag_of_East_Timor.svg.png" alt="Flag of Timor-Leste" loading="lazy">
+        <div class="topic-content">
+          <p class="eyebrow"><span>01</span> Country</p>
+          <h3>About Timor-Leste</h3>
+          <p class="topic-summary">The island nation at a glance.</p>
+          <details>
+            <summary>Read chapter</summary>
+            <div class="chapter-body"><p>Timor-Leste, the eastern half of the island of Timor, is a Southeast Asian nation known for its rich cultural
+          heritage, stunning landscapes, and resilient spirit. It is home to diverse communities and has a unique
+          history shaped by colonial influences and independence struggles. The country is also recognized for its
+          natural beauty, including pristine beaches and lush forests.</p></div>
+          </details>
+        </div>
+      </article><article id="overview" class="topic" data-group="Country">
+        <img class="topic-image" src="img/hero.jpg" alt="Scenery of Timor-Leste" loading="lazy">
+        <div class="topic-content">
+          <p class="eyebrow"><span>02</span> Country</p>
+          <h3>Country overview</h3>
+          <p class="topic-summary">Geography, independence and everyday life.</p>
+          <details>
+            <summary>Read chapter</summary>
+            <div class="chapter-body"><p>Timor-Leste, also known as East Timor, is a small Southeast Asian nation located on the eastern half of Timor
           Island, north of Australia. It gained independence in 2002 after a long struggle against Indonesian
           occupation. The country has a rich cultural heritage influenced by Portuguese, Indonesian, and indigenous
           traditions. Its official languages are Tetum and Portuguese, while Indonesian and English are widely used.
           Timor-Leste’s economy relies heavily on oil and gas resources, agriculture, and emerging tourism. Despite
           challenges such as poverty and infrastructure development, the nation continues to grow politically and
-          economically while preserving its unique culture and strong community traditions.</p>
-      </div>
-    </section>
-
-    <section id="population" class="topic-card group has-video">
-      <h2 class="card-heading">Population Dynamics</h2>
-      <div class="img-wrapper p-4 bg-white shadow-inner flex items-center justify-center rounded-xl">
-        <img src="img/population.png" alt="Population of Timor Leste" loading="lazy"
-          class="object-contain w-full h-full">
-      </div>
-      <div class="video-wrapper">
-        <iframe src="https://www.youtube.com/embed/L-dYok7FeR8" title="Population of Timor Leste" loading="lazy"
-          allowfullscreen></iframe>
-      </div>
-      <div class="text-content">
-        <p>Timor-Leste has a population of about <b>1.4 million people</b>, making it one of the smallest countries in
-          Southeast Asia. Recent estimates place the population at around <b>1.42–1.43 million in 2026</b>.</p>
-        <p class="mt-4">The country has a relatively <b>young population</b>, with a large proportion of people under
+          economically while preserving its unique culture and strong community traditions.</p><div class="video-tools">
+          <button class="js-only outline" type="button" data-video="LUOXkks3Qz0" data-title="Country overview video">▶ Play video here</button>
+          <a href="https://www.youtube.com/watch?v=LUOXkks3Qz0">Watch on YouTube ↗</a>
+        </div></div>
+          </details>
+        </div>
+      </article><article id="population" class="topic" data-group="Country">
+        <img class="topic-image" src="img/population.png" alt="Population of Timor Leste" loading="lazy">
+        <div class="topic-content">
+          <p class="eyebrow"><span>03</span> Country</p>
+          <h3>Population</h3>
+          <p class="topic-summary">A young population and where people live.</p>
+          <details>
+            <summary>Read chapter</summary>
+            <div class="chapter-body"><p>Timor-Leste has a population of about <b>1.4 million people</b>, making it one of the smallest countries in
+          Southeast Asia. Recent estimates place the population at around <b>1.42–1.43 million in 2026</b>.</p><p>The country has a relatively <b>young population</b>, with a large proportion of people under
           the age of 25. About <b>51% of the population is male and 49% female</b> and only around one-third of people
           live in urban areas, while most live in rural communities. The population density is roughly 97 people per
-          square kilometer.</p>
-      </div>
-    </section>
-
-    <section id="political" class="topic-card group">
-      <h2 class="card-heading">Political Leadership</h2>
-      <div class="img-wrapper flex justify-center items-start">
-        <img src="img/leader.jpg" alt="Portrait of Timor Leste leader José Ramos-Horta" loading="lazy"
-          class="political-portrait">
-      </div>
-      <div class="text-content space-y-4">
-        <p>José Ramos-Horta was born on December 26, 1949, in Dili, which is now the capital of Timor-Leste. During his
+          square kilometer.</p><div class="video-tools">
+          <button class="js-only outline" type="button" data-video="L-dYok7FeR8" data-title="Population video">▶ Play video here</button>
+          <a href="https://www.youtube.com/watch?v=L-dYok7FeR8">Watch on YouTube ↗</a>
+        </div></div>
+          </details>
+        </div>
+      </article><article id="political" class="topic" data-group="Country">
+        <img class="topic-image" src="img/leader.jpg" alt="Portrait of Timor Leste leader José Ramos-Horta" loading="lazy">
+        <div class="topic-content">
+          <p class="eyebrow"><span>04</span> Country</p>
+          <h3>Political leadership</h3>
+          <p class="topic-summary">José Ramos-Horta and the independence movement.</p>
+          <details>
+            <summary>Read chapter</summary>
+            <div class="chapter-body"><p>José Ramos-Horta was born on December 26, 1949, in Dili, which is now the capital of Timor-Leste. During his
           youth, Timor-Leste was under Portuguese colonial rule. Later, in 1975, Indonesia invaded the country. This
-          period was very difficult for the Timorese people.</p>
-        <p>Ramos-Horta became one of the most important voices for Timor-Leste’s independence. He spent many years in
+          period was very difficult for the Timorese people.</p><p>Ramos-Horta became one of the most important voices for Timor-Leste’s independence. He spent many years in
           exile, traveling around the world to speak at the United Nations and meet foreign leaders. His goal was to
           gain international support for his country’s freedom. He worked tirelessly and peacefully to defend the rights
-          of his people.</p>
-        <p>In 1996, José Ramos-Horta and Bishop Carlos Filipe Ximenes Belo were awarded the Nobel Peace Prize for their
-          peaceful efforts to resolve the conflict in Timor-Leste.</p>
-        <iframe class="w-full aspect-video rounded-xl shadow-md mt-6" src="https://www.youtube.com/embed/Xo2rSJBG-AQ"
-          title="Political leadership in Timor Leste" loading="lazy" allowfullscreen></iframe>
-      </div>
-    </section>
-
-    <section id="communication" class="topic-card group has-video">
-      <h2 class="card-heading">Digital Communication</h2>
-      <div class="img-wrapper">
-        <img src="img/communication.jpg" alt="Timor Leste residents using smartphones" loading="lazy">
-      </div>
-      <div class="video-wrapper">
-        <iframe src="https://www.youtube.com/embed/iXmnj2bthwE" title="Communication in Timore Leste" loading="lazy"
-          allowfullscreen></iframe>
-      </div>
-      <div class="text-content">
-        <p>One of the most popular apps used in Timor Leste is MyTelkomcel, a daily tool that helps people stay
+          of his people.</p><p>In 1996, José Ramos-Horta and Bishop Carlos Filipe Ximenes Belo were awarded the Nobel Peace Prize for their
+          peaceful efforts to resolve the conflict in Timor-Leste.</p><div class="video-tools">
+          <button class="js-only outline" type="button" data-video="Xo2rSJBG-AQ" data-title="Political leadership video">▶ Play video here</button>
+          <a href="https://www.youtube.com/watch?v=Xo2rSJBG-AQ">Watch on YouTube ↗</a>
+        </div></div>
+          </details>
+        </div>
+      </article><article id="communication" class="topic" data-group="Country">
+        <img class="topic-image" src="img/communication.jpg" alt="Timor Leste residents using smartphones" loading="lazy">
+        <div class="topic-content">
+          <p class="eyebrow"><span>05</span> Country</p>
+          <h3>Digital communication</h3>
+          <p class="topic-summary">How mobile services help people stay connected.</p>
+          <details>
+            <summary>Read chapter</summary>
+            <div class="chapter-body"><p>One of the most popular apps used in Timor-Leste is MyTelkomcel, a daily tool that helps people stay
           connected across mountains, towns, and coastal villages. Its best feature is zero-data access: even with no
           balance, users can open the app and buy internet packages, so they don’t need to hunt for Wi-Fi just to get
-          online.</p>
-        <p class="mt-4">MyTelkomcel also works like a small digital hub, offering local updates, rewards, and easy
+          online.</p><p>MyTelkomcel also works like a small digital hub, offering local updates, rewards, and easy
           account management in one place. By reducing the stress of suddenly losing connectivity, MyTelkomcel supports
-          digital inclusion and opportunity every day.</p>
-      </div>
-    </section>
-
-    <section id="language" class="topic-card group has-video">
-      <h2 class="card-heading">Language</h2>
-      <div class="img-wrapper">
-        <img src="img/language.png" alt="Languages spoken in Timor Leste" loading="lazy">
-      </div>
-      <div class="video-wrapper">
-        <iframe src="https://www.youtube.com/embed/FBrLZNbqnZ4" title="Hindi language video" loading="lazy"
-          allowfullscreen></iframe>
-      </div>
-      <div class="text-content">
-        <p>Timor-Leste has two official languages: <b>Tetum and Portuguese</b>. Tetum is the most widely spoken language
+          digital inclusion and opportunity every day.</p><div class="video-tools">
+          <button class="js-only outline" type="button" data-video="iXmnj2bthwE" data-title="Digital communication video">▶ Play video here</button>
+          <a href="https://www.youtube.com/watch?v=iXmnj2bthwE">Watch on YouTube ↗</a>
+        </div></div>
+          </details>
+        </div>
+      </article><article id="language" class="topic" data-group="Culture">
+        <img class="topic-image" src="img/language.png" alt="Languages spoken in Timor Leste" loading="lazy">
+        <div class="topic-content">
+          <p class="eyebrow"><span>06</span> Culture</p>
+          <h3>Language</h3>
+          <p class="topic-summary">Tetum, Portuguese and Indigenous languages.</p>
+          <details>
+            <summary>Read chapter</summary>
+            <div class="chapter-body"><p>Timor-Leste has two official languages: <b>Tetum and Portuguese</b>. Tetum is the most widely spoken language
           and is used in daily communication, local media, and community life. Portuguese became an official language
           because Timor-Leste was a Portuguese colony for many centuries, so it is still used in government, education,
           and legal systems. Many people also understand Indonesian, especially those who studied during the Indonesian
           period, while English is becoming more important for international communication. In addition, Timor-Leste has
-          many indigenous languages, such as Mambae, Fataluku, and Makasae, reflecting its rich cultural diversity.</p>
-      </div>
-    </section>
-
-    <section id="sport" class="topic-card group has-video">
-      <h2 class="card-heading">Traditional Sport</h2>
-      <div class="img-wrapper">
-        <img src="img/sport.webp" alt="Traditional Timor Leste sport: players engaged in Kempo" loading="lazy">
-      </div>
-      <div class="video-wrapper">
-        <iframe src="https://www.youtube.com/embed/do0QrnXB6v4" title="Traditional Timor Leste sport video"
-          loading="lazy" allowfullscreen></iframe>
-      </div>
-      <div class="text-content">
-        <p><b>Kempo</b> in Timor-Leste is more than a martial art; it is a growing sport that builds discipline,
+          many indigenous languages, such as Mambae, Fataluku, and Makasae, reflecting its rich cultural diversity.</p><div class="video-tools">
+          <button class="js-only outline" type="button" data-video="FBrLZNbqnZ4" data-title="Language video">▶ Play video here</button>
+          <a href="https://www.youtube.com/watch?v=FBrLZNbqnZ4">Watch on YouTube ↗</a>
+        </div></div>
+          </details>
+        </div>
+      </article><article id="sport" class="topic" data-group="Culture">
+        <img class="topic-image" src="img/sport.webp" alt="Traditional Timor Leste sport: players engaged in Kempo" loading="lazy">
+        <div class="topic-content">
+          <p class="eyebrow"><span>07</span> Culture</p>
+          <h3>Kempo</h3>
+          <p class="topic-summary">Discipline and community through martial arts.</p>
+          <details>
+            <summary>Read chapter</summary>
+            <div class="chapter-body"><p><b>Kempo</b> in Timor-Leste is more than a martial art; it is a growing sport that builds discipline,
           confidence, and community pride. Training blends self-defense techniques, sparring, and kata-like forms that
           improve balance, speed, and mental focus. For many young Timorese, the dojo becomes a safe place to learn
           respect, teamwork, and healthy routines. Local tournaments encourage friendly competition across districts and
           create role models who show that effort matters more than status. Kempo also supports national identity by
           celebrating perseverance after hardship, and it can open pathways to regional events, scholarships, and
           coaching careers for talented athletes. With support, schools and clubs can expand access for girls and rural
-          youth.</p>
-      </div>
-    </section>
-
-    <!-- Entertainment Section -->
-
-    <section id="entertainment" class="topic-card group has-video">
-      <h2 class="card-heading">Entertainment</h2>
-
-      <div class="img-wrapper slideshow-wrapper" id="slideshow-entertainment">
-        <div class="slides-container relative w-full h-full group/slider">
-
-          <div class="mySlides fade h-full">
-            <div class="numbertext">1 / 3</div>
-            <img src="img/entertainment.jpg" alt="Likurai dance performance in Timor Leste" loading="lazy">
-
-          </div>
-
-          <div class="mySlides fade h-full hidden">
-            <div class="numbertext">2 / 3</div>
-            <img src="img/entertainment_2.jpg" alt="Timor Leste music and dance" loading="lazy">
-
-          </div>
-
-          <div class="mySlides fade h-full hidden">
-            <div class="numbertext">3 / 3</div>
-            <img src="img/entertainment_3.jpg" alt="Modern hip hop culture in Timor Leste" loading="lazy">
-
-          </div>
-
-          <a class="prev" onclick="plusSlides(-1, 'slideshow-entertainment')">&#10094;</a>
-          <a class="next" onclick="plusSlides(1, 'slideshow-entertainment')">&#10095;</a>
+          youth.</p><div class="video-tools">
+          <button class="js-only outline" type="button" data-video="do0QrnXB6v4" data-title="Kempo video">▶ Play video here</button>
+          <a href="https://www.youtube.com/watch?v=do0QrnXB6v4">Watch on YouTube ↗</a>
+        </div></div>
+          </details>
         </div>
-
-        <div class="dot-container py-3 text-center border-t border-slate-100 transition-colors"
-          id="dots-slideshow-entertainment">
-          <span class="dot" onclick="currentSlide(1, 'slideshow-entertainment')"></span>
-          <span class="dot" onclick="currentSlide(2, 'slideshow-entertainment')"></span>
-          <span class="dot" onclick="currentSlide(3, 'slideshow-entertainment')"></span>
-        </div>
-      </div>
-      <div class="video-wrapper">
-        <iframe src="https://www.youtube.com/embed/nEj76Yr7Sig" title="Timor Lesten entertainment video" loading="lazy"
-          allowfullscreen></iframe>
-      </div>
-      <div class="text-content">
-        <p>Likurai is a traditional theatrical performance of Timor-Leste that combines rhythmic drumming with
+      </article><article id="entertainment" class="topic" data-group="Culture">
+        <img class="topic-image" src="img/entertainment.jpg" alt="Likurai dance performance in Timor Leste" loading="lazy">
+        <div class="topic-content">
+          <p class="eyebrow"><span>08</span> Culture</p>
+          <h3>Music & dance</h3>
+          <p class="topic-summary">Discover the rhythm and history of Likurai.</p>
+          <details>
+            <summary>Read chapter</summary>
+            <div class="chapter-body"><p>Likurai is a traditional theatrical performance of Timor-Leste that combines rhythmic drumming with
           coordinated dance movements. Historically, it was performed by women to welcome warriors returning from
           battle, using drums to symbolize victory, courage, and communal strength. Over time, Likurai has evolved from
           a ritual of celebration into a formal stage performance that represents national identity and cultural
@@ -271,21 +204,21 @@
 
           Today, Likurai stands as more than entertainment. It is a living expression of history, resilience, and pride,
           preserving the cultural heritage of the Timorese people for future generations.
-        </p>
-      </div>
-    </section>
-
-    <section id="personality" class="topic-card group has-video">
-      <h2 class="card-heading">Personality</h2>
-      <div class="img-wrapper">
-        <img src="img/personality.jpg" alt="Contrasting personality styles related to Timor Leste" loading="lazy">
-      </div>
-      <div class="video-wrapper">
-        <iframe src="https://www.youtube.com/embed/xWlxXq_0nyY" title="Personality comparison video" loading="lazy"
-          allowfullscreen></iframe>
-      </div>
-      <div class="text-content">
-        <p>
+        </p><div class="gallery" aria-label="Dance photo gallery"><div class="slides"><figure><img src="img/entertainment.jpg" alt="Likurai dance performance in Timor Leste" loading="lazy"><figcaption>Likurai dance performance in Timor Leste</figcaption></figure><figure hidden><img src="img/entertainment_2.jpg" alt="Timor Leste music and dance" loading="lazy"><figcaption>Timor Leste music and dance</figcaption></figure><figure hidden><img src="img/entertainment_3.jpg" alt="Modern hip hop culture in Timor Leste" loading="lazy"><figcaption>Modern hip hop culture in Timor Leste</figcaption></figure></div><div class="gallery-controls js-only"><button type="button" data-slide="-1" aria-label="Previous photo">←</button><span class="slide-count" aria-live="polite">1 / 3</span><button type="button" data-slide="1" aria-label="Next photo">→</button></div></div><div class="video-tools">
+          <button class="js-only outline" type="button" data-video="nEj76Yr7Sig" data-title="Music & dance video">▶ Play video here</button>
+          <a href="https://www.youtube.com/watch?v=nEj76Yr7Sig">Watch on YouTube ↗</a>
+        </div></div>
+          </details>
+        </div>
+      </article><article id="personality" class="topic" data-group="Culture">
+        <img class="topic-image" src="img/personality.jpg" alt="Contrasting personality styles related to Timor Leste" loading="lazy">
+        <div class="topic-content">
+          <p class="eyebrow"><span>09</span> Culture</p>
+          <h3>Personal reflection</h3>
+          <p class="topic-summary">A student’s reflection on community and harmony.</p>
+          <details>
+            <summary>Read chapter</summary>
+            <div class="chapter-body"><p>
           <b>Comparing My Personality with Timorese People</b><br>
           My personality can be described as ambiverted. Sometimes I enjoy being around people, but large social
           situations can drain my energy. However, when I am alone for too long, I can feel uncomfortable. I am also
@@ -298,69 +231,94 @@
 
           Overall, although my personality is more inward, I share the Timorese appreciation for understanding others
           and maintaining harmony in relationships.
-        </p>
-      </div>
-    </section>
-
-    <!-- Festival -->
-
-    <section id="festival" class="topic-card group has-video">
-      <h2 class="card-heading">Festival</h2>
-      <div class="img-wrapper">
-        <img src="img/festival.webp" alt="Festival dance illustration from Timor Leste" loading="lazy">
-      </div>
-      <div class="video-wrapper">
-        <iframe src="https://www.youtube.com/embed/S7nfXPFk0f0" title="Festival in Timor Leste" loading="lazy"
-          allowfullscreen></iframe>
-      </div>
-      <div class="text-content">
-        <p>In the eastern part of <b>Timor-Leste</b>, near <b>Jaco Island</b>, the Fataluku people celebrate a fascinating tradition known as the <b>Mechi (Meci) Festival</b>.<br><br> This unique event follows the lunar cycle rather than a fixed calendar. The smaller harvest, called <b>Mechi kiik</b>, occurs during the last-quarter moon in February, while the main harvest, <b>Mechi boot</b>, takes place around the new moon in March.<br><br> Before sunrise, communities gather along the beach with nets and baskets, waiting for palolo sea worms to emerge briefly from the ocean. Because the worms appear only for a short time, the harvest is both exciting and carefully timed.<br><br> After collecting them, people celebrate with traditional food, singing, and dancing. The Mechi Festival reflects the deep connection between local culture, the sea, and the rhythms of nature.</p>
-      </div>
-    </section>
-
-    <section id="environment" class="topic-card group has-video">
-      <h2 class="card-heading">Environment</h2>
-      <div class="img-wrapper">
-        <img src="img/environment.jpg" alt="Environmental issues in Timor Leste" loading="lazy">
-      </div>
-      <div class="video-wrapper">
-        <iframe src="https://www.youtube.com/embed/2wg4wg-wRMg" title="Environment in Timor Leste" loading="lazy"
-          allowfullscreen></iframe>
-      </div>
-      <div class="text-content">
-        <p><b>Timor-Leste faces a major environmental issue:</b> deforestation and land degradation. Many forests have
+        </p><div class="video-tools">
+          <button class="js-only outline" type="button" data-video="xWlxXq_0nyY" data-title="Personal reflection video">▶ Play video here</button>
+          <a href="https://www.youtube.com/watch?v=xWlxXq_0nyY">Watch on YouTube ↗</a>
+        </div></div>
+          </details>
+        </div>
+      </article><article id="festival" class="topic" data-group="Culture">
+        <img class="topic-image" src="img/festival.webp" alt="Festival dance illustration from Timor Leste" loading="lazy">
+        <div class="topic-content">
+          <p class="eyebrow"><span>10</span> Culture</p>
+          <h3>Mechi Festival</h3>
+          <p class="topic-summary">A coastal tradition that follows the moon.</p>
+          <details>
+            <summary>Read chapter</summary>
+            <div class="chapter-body"><p>In the eastern part of <b>Timor-Leste</b>, near <b>Jaco Island</b>, the Fataluku people celebrate a fascinating tradition known as the <b>Mechi (Meci) Festival</b>.<br><br> This unique event follows the lunar cycle rather than a fixed calendar. The smaller harvest, called <b>Mechi kiik</b>, occurs during the last-quarter moon in February, while the main harvest, <b>Mechi boot</b>, takes place around the new moon in March.<br><br> Before sunrise, communities gather along the beach with nets and baskets, waiting for palolo sea worms to emerge briefly from the ocean. Because the worms appear only for a short time, the harvest is both exciting and carefully timed.<br><br> After collecting them, people celebrate with traditional food, singing, and dancing. The Mechi Festival reflects the deep connection between local culture, the sea, and the rhythms of nature.</p><div class="video-tools">
+          <button class="js-only outline" type="button" data-video="S7nfXPFk0f0" data-title="Mechi Festival video">▶ Play video here</button>
+          <a href="https://www.youtube.com/watch?v=S7nfXPFk0f0">Watch on YouTube ↗</a>
+        </div></div>
+          </details>
+        </div>
+      </article><article id="environment" class="topic" data-group="Nature">
+        <img class="topic-image" src="img/environment.jpg" alt="Environmental issues in Timor Leste" loading="lazy">
+        <div class="topic-content">
+          <p class="eyebrow"><span>11</span> Nature</p>
+          <h3>Environment</h3>
+          <p class="topic-summary">Forests, livelihoods and conservation.</p>
+          <details>
+            <summary>Read chapter</summary>
+            <div class="chapter-body"><p><b>Timor-Leste faces a major environmental issue:</b> deforestation and land degradation. Many forests have
           been cleared for firewood, agriculture, and settlement. As a result, soil erosion has become severe,
           especially during the rainy season. Floods and landslides damage villages, roads, and farmland, while droughts
           reduce crop production in rural communities. Because much of the population depends on agriculture,
-          environmental damage directly affects food security and livelihoods.</p> <br>
-        <p><b>The government of Timor-Leste is working to protect its environment</b> through reforestation and
+          environmental damage directly affects food security and livelihoods.</p><p><b>The government of Timor-Leste is working to protect its environment</b> through reforestation and
           sustainable land management programs. It cooperates with international organizations to plant trees, restore
           watersheds, and educate farmers about soil conservation techniques. Environmental laws have also been
           introduced to regulate logging and promote responsible resource use. Although the country still faces economic
-          challenges, these efforts aim to create a more sustainable future.</p>
+          challenges, these efforts aim to create a more sustainable future.</p><div class="video-tools">
+          <button class="js-only outline" type="button" data-video="2wg4wg-wRMg" data-title="Environment video">▶ Play video here</button>
+          <a href="https://www.youtube.com/watch?v=2wg4wg-wRMg">Watch on YouTube ↗</a>
+        </div></div>
+          </details>
+        </div>
+      </article>
       </div>
     </section>
 
-    <section id="Map"
-      class="map-section-card w-full rounded-3xl shadow-xl p-4 overflow-hidden transform transition duration-500 hover:shadow-2xl">
-      <h2 class="map-heading text-3xl font-extrabold mb-6 px-4">Locate Timor Leste</h2>
-      <div class="relative w-full h-[500px] rounded-2xl overflow-hidden shadow-inner">
-        <iframe src="https://maps.google.com/maps?q=Timor+Leste&t=&z=7&ie=UTF8&iwloc=&output=embed"
-          class="absolute inset-0 w-full h-full border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-          allowfullscreen></iframe>
+    <section id="Map" class="section map-section" aria-labelledby="map-title">
+      <div class="shell map-layout">
+        <div class="section-head">
+          <p class="eyebrow">02 / Geography</p>
+          <h2 id="map-title">Find your bearings.</h2>
+          <p>Start in Dili, then explore the offshore island of Ataúro or head east toward Jaco Island.</p>
+          <div class="filters js-only" id="map-places" role="group" aria-label="Choose a location">
+            <button type="button" data-place="Dili, Timor-Leste" aria-pressed="true">Dili</button>
+            <button type="button" data-place="Ataúro Island, Timor-Leste" aria-pressed="false">Ataúro</button>
+            <button type="button" data-place="Jaco Island, Timor-Leste" aria-pressed="false">Jaco Island</button>
+          </div>
+        </div>
+        <div class="map-panel">
+          <div id="map-canvas" class="map-canvas">
+            <button type="button" id="load-map" class="js-only button primary">Load interactive map</button>
+            <noscript><p>Open the map using the link below.</p></noscript>
+          </div>
+          <div class="map-caption"><strong id="map-label" aria-live="polite">Dili, Timor-Leste</strong><a id="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Dili%2C%20Timor-Leste">Open in Google Maps ↗</a></div>
+        </div>
       </div>
     </section>
 
+    <section id="quiz" class="shell section" aria-labelledby="quiz-title">
+      <div class="section-head">
+        <p class="eyebrow">03 / Quick quiz</p>
+        <h2 id="quiz-title">What do you remember?</h2>
+        <p>Try three questions from the guide and check your answers.</p>
+      </div>
+      <noscript><p>Enable JavaScript to take the quiz.</p></noscript>
+      <form id="quiz-form" class="js-only">
+        <div class="questions"><fieldset data-answer="0" data-explanation="Tetum and Portuguese are the two official languages."><legend>01 / Which two languages are official in Timor-Leste?</legend><label><input type="radio" name="q1" value="0" required> Tetum and Portuguese</label><label><input type="radio" name="q1" value="1" required> English and Indonesian</label><label><input type="radio" name="q1" value="2" required> Portuguese and Spanish</label><p class="question-feedback" hidden></p></fieldset><fieldset data-answer="1" data-explanation="The festival follows phases of the moon, so its timing shifts."><legend>02 / What determines the timing of the Mechi Festival?</legend><label><input type="radio" name="q2" value="0" required> The start of the school year</label><label><input type="radio" name="q2" value="1" required> The lunar cycle</label><label><input type="radio" name="q2" value="2" required> A fixed date in January</label><p class="question-feedback" hidden></p></fieldset><fieldset data-answer="2" data-explanation="Dili is the capital, on the north coast of Timor Island."><legend>03 / Which city is the capital of Timor-Leste?</legend><label><input type="radio" name="q3" value="0" required> Baucau</label><label><input type="radio" name="q3" value="1" required> Lospalos</label><label><input type="radio" name="q3" value="2" required> Dili</label><p class="question-feedback" hidden></p></fieldset></div>
+        <div class="quiz-actions">
+          <button class="button primary" type="submit">Check answers</button>
+          <button class="outline" type="reset">Reset quiz</button>
+          <p id="quiz-result" role="status"></p>
+        </div>
+      </form>
+    </section>
   </main>
-
-  <footer class="bg-slate-900 text-slate-400 py-12 text-center border-t border-slate-800">
-    <p class="font-medium tracking-wide">Designed by 68011448 Pattanan Ongchoityakul</p>
-    <p class="text-sm mt-2 opacity-60">This website is for 96642091 Asian Study subject.</p>
-  </footer>
-
-  <!-- Script -->
-  <script src="script.js"></script>
-
+  <footer><div class="shell footer-inner">
+    <div><strong>Timor-Leste · An Island Guide</strong><p>Asian Study 96642091 · Pattanan Ongchotiyakul (68011448)</p></div>
+    <a href="#top">Back to top ↑</a>
+  </div></footer>
 </body>
-
 </html>
