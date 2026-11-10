@@ -86,65 +86,96 @@ gallery.addEventListener('keydown', event => {
   }
 });
 
-document.querySelectorAll('[data-video]').forEach(button => {
-  const chapter = button.closest('details');
-  let player;
+const playlist = [...document.querySelectorAll('#playlist a')];
+const poster = document.getElementById('film-poster');
+const filmTitle = document.getElementById('film-title');
+const filmExternal = document.getElementById('film-external');
+const playButton = document.getElementById('film-play');
+let selectedFilm = playlist[0];
+let player;
 
-  button.addEventListener('click', () => {
-    if (player) {
-      player.remove();
-      player = null;
-      button.textContent = '▶ Play video here';
-      return;
+function selectFilm(film) {
+  player?.remove();
+  player = null;
+  selectedFilm.removeAttribute('aria-current');
+  selectedFilm = film;
+  film.setAttribute('aria-current', 'true');
+  poster.src = film.dataset.poster;
+  filmTitle.textContent = film.dataset.title;
+  filmExternal.href = film.href;
+  playButton.setAttribute('aria-label', `Play ${film.dataset.title}`);
+  playButton.hidden = false;
+}
+
+document.querySelectorAll('[data-watch]').forEach(link => {
+  link.addEventListener('click', event => {
+    if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    const film = playlist.find(entry => entry.dataset.watch === link.dataset.watch);
+    if (film !== selectedFilm) selectFilm(film);
+    if (!playlist.includes(link)) {
+      document.getElementById('watch').scrollIntoView();
+      (player || playButton).focus({ preventScroll: true });
     }
-    player = document.createElement('iframe');
-    player.title = button.dataset.title;
-    player.src = `https://www.youtube-nocookie.com/embed/${button.dataset.video}`;
-    player.allow = 'encrypted-media; picture-in-picture';
-    player.allowFullscreen = true;
-    button.parentElement.append(player);
-    button.textContent = 'Hide video';
   });
+});
 
-  chapter.addEventListener('toggle', () => {
-    if (!chapter.open && player) button.click();
-  });
+playButton.addEventListener('click', () => {
+  player = document.createElement('iframe');
+  player.title = `${selectedFilm.dataset.title} video`;
+  player.src = `https://www.youtube-nocookie.com/embed/${selectedFilm.dataset.watch}?autoplay=1`;
+  player.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+  player.allowFullscreen = true;
+  document.getElementById('film-screen').append(player);
+  playButton.hidden = true;
+  player.focus({ preventScroll: true });
 });
 
 const mapCanvas = document.getElementById('map-canvas');
 const mapLabel = document.getElementById('map-label');
+const mapNote = document.getElementById('map-note');
 const mapLink = document.getElementById('map-link');
+const mapToggle = document.getElementById('load-map');
 const mapPlaces = [...document.querySelectorAll('[data-place]')];
-let selectedPlace = mapPlaces[0].dataset.place;
+let selectedPlace = mapPlaces[0];
 let mapFrame;
 
 function updateMap() {
-  const query = encodeURIComponent(selectedPlace);
-  mapLabel.textContent = selectedPlace;
+  const place = selectedPlace.dataset.place;
+  const query = encodeURIComponent(place);
+  mapLabel.textContent = place;
+  mapNote.textContent = selectedPlace.dataset.note;
   mapLink.href = `https://www.google.com/maps/search/?api=1&query=${query}`;
   if (mapFrame) {
-    mapFrame.title = `Map of ${selectedPlace}`;
-    mapFrame.src = `https://maps.google.com/maps?q=${query}&z=10&output=embed`;
+    mapFrame.title = `Map of ${place}`;
+    mapFrame.src = `https://maps.google.com/maps?q=${query}&z=11&output=embed`;
   }
 }
 
 mapPlaces.forEach(button => {
   button.addEventListener('click', () => {
-    selectedPlace = button.dataset.place;
-    mapPlaces.forEach(place => {
-      place.setAttribute('aria-pressed', String(place === button));
-    });
+    if (selectedPlace === button) return;
+    selectedPlace.setAttribute('aria-pressed', 'false');
+    selectedPlace = button;
+    button.setAttribute('aria-pressed', 'true');
     updateMap();
   });
 });
 
-document.getElementById('load-map').addEventListener('click', event => {
-  mapFrame = document.createElement('iframe');
-  mapFrame.referrerPolicy = 'no-referrer-when-downgrade';
-  updateMap();
-  event.currentTarget.remove();
-  mapCanvas.append(mapFrame);
-  mapLink.focus();
+mapToggle.addEventListener('click', () => {
+  const opening = mapCanvas.hidden;
+  mapCanvas.hidden = !opening;
+  mapToggle.setAttribute('aria-expanded', String(opening));
+  mapToggle.textContent = opening ? 'Hide zoomable map' : 'Open zoomable map';
+  if (opening) {
+    mapFrame = document.createElement('iframe');
+    mapFrame.referrerPolicy = 'no-referrer-when-downgrade';
+    updateMap();
+    mapCanvas.append(mapFrame);
+  } else {
+    mapFrame.remove();
+    mapFrame = null;
+  }
 });
 
 const quiz = document.getElementById('quiz-form');
