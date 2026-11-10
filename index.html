@@ -13,7 +13,7 @@
   <header class="site-header">
     <div class="shell header-inner">
       <a class="brand" href="#top"><img src="img/Flag_of_East_Timor.svg.png" width="32" height="22" alt=""> Timor-Leste</a>
-      <nav aria-label="Main navigation"><a class="" href="#explore">Explore</a><a class="" href="#Map">Map</a><a class="" href="#quiz">Quiz</a></nav>
+      <nav aria-label="Main navigation"><a class="" href="#watch">Watch</a><a class="" href="#explore">Explore</a><a class="" href="#Map">Map</a><a class="" href="#quiz">Quiz</a></nav>
       <button id="theme-toggle" class="js-only theme-toggle" type="button" aria-label="Dark mode" aria-pressed="false"><span aria-hidden="true">◐</span></button>
     </div>
   </header>
@@ -25,8 +25,8 @@
         <h1 id="hero-title">Timor<span>-</span><wbr>Leste<span>.</span></h1>
         <p class="hero-copy">From the rhythms of Likurai to the coast of Dili, explore the people, traditions and landscapes of Timor-Leste.</p>
         <div class="hero-actions">
-          <a class="button primary" href="#explore">Explore chapters <span aria-hidden="true">↓</span></a>
-          <a class="button ghost" href="#Map">Find it on the map <span aria-hidden="true">↗</span></a>
+          <a class="button primary" href="#watch">Watch the films</a>
+          <a class="button ghost" href="#explore">Explore chapters</a>
         </div>
       </div>
     </section>
@@ -36,11 +36,46 @@
       <div><dt>Independence restored</dt><dd>20 May 2002</dd></div>
     </dl>
 
+    <section id="watch" class="shell section watch-section" aria-labelledby="watch-title">
+      <div class="section-head">
+        <p class="eyebrow">01 / Video collection</p>
+        <h2 id="watch-title">Watch Timor-Leste.</h2>
+        <p>Start with the country overview, then choose a film about its people, culture or landscapes.</p>
+      </div>
+      <div class="cinema">
+        <div class="screen-column">
+          <div class="film-screen" id="film-screen">
+            <img id="film-poster" src="img/hero.jpg" alt="">
+            <button class="js-only film-play" id="film-play" type="button" aria-label="Play Country overview"><span aria-hidden="true">▶</span> Play film</button>
+          </div>
+          <div class="film-caption">
+            <h3 id="film-title" aria-live="polite">Country overview</h3>
+            <a id="film-external" href="https://www.youtube.com/watch?v=LUOXkks3Qz0">Watch on YouTube</a>
+          </div>
+        </div>
+        <div class="playlist-panel">
+          <p class="eyebrow">Playlist / 10 films</p>
+          <ol id="playlist" aria-label="Video playlist">
+            <li><a href="https://www.youtube.com/watch?v=LUOXkks3Qz0" data-watch="LUOXkks3Qz0" data-poster="img/hero.jpg" data-title="Country overview" aria-current="true"><img src="img/hero.jpg" alt="" loading="lazy"><span><small>01 / Film</small>Country overview</span></a></li>
+            <li><a href="https://www.youtube.com/watch?v=L-dYok7FeR8" data-watch="L-dYok7FeR8" data-poster="img/population.png" data-title="Population"><img src="img/population.png" alt="" loading="lazy"><span><small>02 / Film</small>Population</span></a></li>
+            <li><a href="https://www.youtube.com/watch?v=Xo2rSJBG-AQ" data-watch="Xo2rSJBG-AQ" data-poster="img/leader.jpg" data-title="Political leadership"><img src="img/leader.jpg" alt="" loading="lazy"><span><small>03 / Film</small>Political leadership</span></a></li>
+            <li><a href="https://www.youtube.com/watch?v=iXmnj2bthwE" data-watch="iXmnj2bthwE" data-poster="img/communication.jpg" data-title="Digital communication"><img src="img/communication.jpg" alt="" loading="lazy"><span><small>04 / Film</small>Digital communication</span></a></li>
+            <li><a href="https://www.youtube.com/watch?v=FBrLZNbqnZ4" data-watch="FBrLZNbqnZ4" data-poster="img/language.png" data-title="Language"><img src="img/language.png" alt="" loading="lazy"><span><small>05 / Film</small>Language</span></a></li>
+            <li><a href="https://www.youtube.com/watch?v=do0QrnXB6v4" data-watch="do0QrnXB6v4" data-poster="img/sport.webp" data-title="Kempo"><img src="img/sport.webp" alt="" loading="lazy"><span><small>06 / Film</small>Kempo</span></a></li>
+            <li><a href="https://www.youtube.com/watch?v=nEj76Yr7Sig" data-watch="nEj76Yr7Sig" data-poster="img/entertainment.jpg" data-title="Music & dance"><img src="img/entertainment.jpg" alt="" loading="lazy"><span><small>07 / Film</small>Music & dance</span></a></li>
+            <li><a href="https://www.youtube.com/watch?v=xWlxXq_0nyY" data-watch="xWlxXq_0nyY" data-poster="img/personality.jpg" data-title="Personal reflection"><img src="img/personality.jpg" alt="" loading="lazy"><span><small>08 / Film</small>Personal reflection</span></a></li>
+            <li><a href="https://www.youtube.com/watch?v=S7nfXPFk0f0" data-watch="S7nfXPFk0f0" data-poster="img/festival.webp" data-title="Mechi Festival"><img src="img/festival.webp" alt="" loading="lazy"><span><small>09 / Film</small>Mechi Festival</span></a></li>
+            <li><a href="https://www.youtube.com/watch?v=2wg4wg-wRMg" data-watch="2wg4wg-wRMg" data-poster="img/environment.jpg" data-title="Environment"><img src="img/environment.jpg" alt="" loading="lazy"><span><small>10 / Film</small>Environment</span></a></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
     <section id="explore" class="shell section" aria-labelledby="explore-title">
       <div class="section-head">
-        <p class="eyebrow">01 / The chapters</p>
+        <p class="eyebrow">02 / The chapters</p>
         <h2 id="explore-title">Get to know<br>Timor-Leste.</h2>
-        <p>Pick a topic to read a chapter, browse photos or watch a video.</p>
+        <p>Pick a topic to read a chapter, browse photos or find a related film.</p>
       </div>
       <div class="filter-bar js-only">
         <div class="filters" role="group" aria-label="Filter chapters">
@@ -80,11 +115,9 @@
           traditions. Its official languages are Tetum and Portuguese, while Indonesian and English are widely used.
           Timor-Leste’s economy relies heavily on oil and gas resources, agriculture, and emerging tourism. Despite
           challenges such as poverty and infrastructure development, the nation continues to grow politically and
-          economically while preserving its unique culture and strong community traditions.</p><div class="video-tools">
-          <button class="js-only outline" type="button" data-video="LUOXkks3Qz0" data-title="Country overview video">▶ Play video here</button>
-          <a href="https://www.youtube.com/watch?v=LUOXkks3Qz0">Watch on YouTube ↗</a>
-        </div></div>
+          economically while preserving its unique culture and strong community traditions.</p></div>
           </details>
+          <a class="chapter-watch" data-watch="LUOXkks3Qz0" href="https://www.youtube.com/watch?v=LUOXkks3Qz0"><span aria-hidden="true">▶</span> Watch video</a>
         </div>
       </article><article id="population" class="topic" data-group="Country">
         <img class="topic-image" src="img/population.png" alt="Population of Timor Leste" loading="lazy">
@@ -98,11 +131,9 @@
           Southeast Asia. Recent estimates place the population at around <b>1.42–1.43 million in 2026</b>.</p><p>The country has a relatively <b>young population</b>, with a large proportion of people under
           the age of 25. About <b>51% of the population is male and 49% female</b> and only around one-third of people
           live in urban areas, while most live in rural communities. The population density is roughly 97 people per
-          square kilometer.</p><div class="video-tools">
-          <button class="js-only outline" type="button" data-video="L-dYok7FeR8" data-title="Population video">▶ Play video here</button>
-          <a href="https://www.youtube.com/watch?v=L-dYok7FeR8">Watch on YouTube ↗</a>
-        </div></div>
+          square kilometer.</p></div>
           </details>
+          <a class="chapter-watch" data-watch="L-dYok7FeR8" href="https://www.youtube.com/watch?v=L-dYok7FeR8"><span aria-hidden="true">▶</span> Watch video</a>
         </div>
       </article><article id="political" class="topic" data-group="Country">
         <img class="topic-image" src="img/leader.jpg" alt="Portrait of Timor Leste leader José Ramos-Horta" loading="lazy">
@@ -118,11 +149,9 @@
           exile, traveling around the world to speak at the United Nations and meet foreign leaders. His goal was to
           gain international support for his country’s freedom. He worked tirelessly and peacefully to defend the rights
           of his people.</p><p>In 1996, José Ramos-Horta and Bishop Carlos Filipe Ximenes Belo were awarded the Nobel Peace Prize for their
-          peaceful efforts to resolve the conflict in Timor-Leste.</p><div class="video-tools">
-          <button class="js-only outline" type="button" data-video="Xo2rSJBG-AQ" data-title="Political leadership video">▶ Play video here</button>
-          <a href="https://www.youtube.com/watch?v=Xo2rSJBG-AQ">Watch on YouTube ↗</a>
-        </div></div>
+          peaceful efforts to resolve the conflict in Timor-Leste.</p></div>
           </details>
+          <a class="chapter-watch" data-watch="Xo2rSJBG-AQ" href="https://www.youtube.com/watch?v=Xo2rSJBG-AQ"><span aria-hidden="true">▶</span> Watch video</a>
         </div>
       </article><article id="communication" class="topic" data-group="Country">
         <img class="topic-image" src="img/communication.jpg" alt="Timor Leste residents using smartphones" loading="lazy">
@@ -137,11 +166,9 @@
           balance, users can open the app and buy internet packages, so they don’t need to hunt for Wi-Fi just to get
           online.</p><p>MyTelkomcel also works like a small digital hub, offering local updates, rewards, and easy
           account management in one place. By reducing the stress of suddenly losing connectivity, MyTelkomcel supports
-          digital inclusion and opportunity every day.</p><div class="video-tools">
-          <button class="js-only outline" type="button" data-video="iXmnj2bthwE" data-title="Digital communication video">▶ Play video here</button>
-          <a href="https://www.youtube.com/watch?v=iXmnj2bthwE">Watch on YouTube ↗</a>
-        </div></div>
+          digital inclusion and opportunity every day.</p></div>
           </details>
+          <a class="chapter-watch" data-watch="iXmnj2bthwE" href="https://www.youtube.com/watch?v=iXmnj2bthwE"><span aria-hidden="true">▶</span> Watch video</a>
         </div>
       </article><article id="language" class="topic" data-group="Culture">
         <img class="topic-image" src="img/language.png" alt="Languages spoken in Timor Leste" loading="lazy">
@@ -156,11 +183,9 @@
           because Timor-Leste was a Portuguese colony for many centuries, so it is still used in government, education,
           and legal systems. Many people also understand Indonesian, especially those who studied during the Indonesian
           period, while English is becoming more important for international communication. In addition, Timor-Leste has
-          many indigenous languages, such as Mambae, Fataluku, and Makasae, reflecting its rich cultural diversity.</p><div class="video-tools">
-          <button class="js-only outline" type="button" data-video="FBrLZNbqnZ4" data-title="Language video">▶ Play video here</button>
-          <a href="https://www.youtube.com/watch?v=FBrLZNbqnZ4">Watch on YouTube ↗</a>
-        </div></div>
+          many indigenous languages, such as Mambae, Fataluku, and Makasae, reflecting its rich cultural diversity.</p></div>
           </details>
+          <a class="chapter-watch" data-watch="FBrLZNbqnZ4" href="https://www.youtube.com/watch?v=FBrLZNbqnZ4"><span aria-hidden="true">▶</span> Watch video</a>
         </div>
       </article><article id="sport" class="topic" data-group="Culture">
         <img class="topic-image" src="img/sport.webp" alt="Traditional Timor Leste sport: players engaged in Kempo" loading="lazy">
@@ -177,11 +202,9 @@
           create role models who show that effort matters more than status. Kempo also supports national identity by
           celebrating perseverance after hardship, and it can open pathways to regional events, scholarships, and
           coaching careers for talented athletes. With support, schools and clubs can expand access for girls and rural
-          youth.</p><div class="video-tools">
-          <button class="js-only outline" type="button" data-video="do0QrnXB6v4" data-title="Kempo video">▶ Play video here</button>
-          <a href="https://www.youtube.com/watch?v=do0QrnXB6v4">Watch on YouTube ↗</a>
-        </div></div>
+          youth.</p></div>
           </details>
+          <a class="chapter-watch" data-watch="do0QrnXB6v4" href="https://www.youtube.com/watch?v=do0QrnXB6v4"><span aria-hidden="true">▶</span> Watch video</a>
         </div>
       </article><article id="entertainment" class="topic" data-group="Culture">
         <img class="topic-image" src="img/entertainment.jpg" alt="Likurai dance performance in Timor Leste" loading="lazy">
@@ -204,11 +227,9 @@
 
           Today, Likurai stands as more than entertainment. It is a living expression of history, resilience, and pride,
           preserving the cultural heritage of the Timorese people for future generations.
-        </p><div class="gallery" aria-label="Dance photo gallery"><div class="slides"><figure><img src="img/entertainment.jpg" alt="Likurai dance performance in Timor Leste" loading="lazy"><figcaption>Likurai dance performance in Timor Leste</figcaption></figure><figure hidden><img src="img/entertainment_2.jpg" alt="Timor Leste music and dance" loading="lazy"><figcaption>Timor Leste music and dance</figcaption></figure><figure hidden><img src="img/entertainment_3.jpg" alt="Modern hip hop culture in Timor Leste" loading="lazy"><figcaption>Modern hip hop culture in Timor Leste</figcaption></figure></div><div class="gallery-controls js-only"><button type="button" data-slide="-1" aria-label="Previous photo">←</button><span class="slide-count" aria-live="polite">1 / 3</span><button type="button" data-slide="1" aria-label="Next photo">→</button></div></div><div class="video-tools">
-          <button class="js-only outline" type="button" data-video="nEj76Yr7Sig" data-title="Music & dance video">▶ Play video here</button>
-          <a href="https://www.youtube.com/watch?v=nEj76Yr7Sig">Watch on YouTube ↗</a>
-        </div></div>
+        </p><div class="gallery" aria-label="Dance photo gallery"><div class="slides"><figure><img src="img/entertainment.jpg" alt="Likurai dance performance in Timor Leste" loading="lazy"><figcaption>Likurai dance performance in Timor Leste</figcaption></figure><figure hidden><img src="img/entertainment_2.jpg" alt="Timor Leste music and dance" loading="lazy"><figcaption>Timor Leste music and dance</figcaption></figure><figure hidden><img src="img/entertainment_3.jpg" alt="Modern hip hop culture in Timor Leste" loading="lazy"><figcaption>Modern hip hop culture in Timor Leste</figcaption></figure></div><div class="gallery-controls js-only"><button type="button" data-slide="-1" aria-label="Previous photo">←</button><span class="slide-count" aria-live="polite">1 / 3</span><button type="button" data-slide="1" aria-label="Next photo">→</button></div></div></div>
           </details>
+          <a class="chapter-watch" data-watch="nEj76Yr7Sig" href="https://www.youtube.com/watch?v=nEj76Yr7Sig"><span aria-hidden="true">▶</span> Watch video</a>
         </div>
       </article><article id="personality" class="topic" data-group="Culture">
         <img class="topic-image" src="img/personality.jpg" alt="Contrasting personality styles related to Timor Leste" loading="lazy">
@@ -231,11 +252,9 @@
 
           Overall, although my personality is more inward, I share the Timorese appreciation for understanding others
           and maintaining harmony in relationships.
-        </p><div class="video-tools">
-          <button class="js-only outline" type="button" data-video="xWlxXq_0nyY" data-title="Personal reflection video">▶ Play video here</button>
-          <a href="https://www.youtube.com/watch?v=xWlxXq_0nyY">Watch on YouTube ↗</a>
-        </div></div>
+        </p></div>
           </details>
+          <a class="chapter-watch" data-watch="xWlxXq_0nyY" href="https://www.youtube.com/watch?v=xWlxXq_0nyY"><span aria-hidden="true">▶</span> Watch video</a>
         </div>
       </article><article id="festival" class="topic" data-group="Culture">
         <img class="topic-image" src="img/festival.webp" alt="Festival dance illustration from Timor Leste" loading="lazy">
@@ -245,11 +264,9 @@
           <p class="topic-summary">A coastal tradition that follows the moon.</p>
           <details>
             <summary>Read chapter</summary>
-            <div class="chapter-body"><p>In the eastern part of <b>Timor-Leste</b>, near <b>Jaco Island</b>, the Fataluku people celebrate a fascinating tradition known as the <b>Mechi (Meci) Festival</b>.<br><br> This unique event follows the lunar cycle rather than a fixed calendar. The smaller harvest, called <b>Mechi kiik</b>, occurs during the last-quarter moon in February, while the main harvest, <b>Mechi boot</b>, takes place around the new moon in March.<br><br> Before sunrise, communities gather along the beach with nets and baskets, waiting for palolo sea worms to emerge briefly from the ocean. Because the worms appear only for a short time, the harvest is both exciting and carefully timed.<br><br> After collecting them, people celebrate with traditional food, singing, and dancing. The Mechi Festival reflects the deep connection between local culture, the sea, and the rhythms of nature.</p><div class="video-tools">
-          <button class="js-only outline" type="button" data-video="S7nfXPFk0f0" data-title="Mechi Festival video">▶ Play video here</button>
-          <a href="https://www.youtube.com/watch?v=S7nfXPFk0f0">Watch on YouTube ↗</a>
-        </div></div>
+            <div class="chapter-body"><p>In the eastern part of <b>Timor-Leste</b>, near <b>Jaco Island</b>, the Fataluku people celebrate a fascinating tradition known as the <b>Mechi (Meci) Festival</b>.<br><br> This unique event follows the lunar cycle rather than a fixed calendar. The smaller harvest, called <b>Mechi kiik</b>, occurs during the last-quarter moon in February, while the main harvest, <b>Mechi boot</b>, takes place around the new moon in March.<br><br> Before sunrise, communities gather along the beach with nets and baskets, waiting for palolo sea worms to emerge briefly from the ocean. Because the worms appear only for a short time, the harvest is both exciting and carefully timed.<br><br> After collecting them, people celebrate with traditional food, singing, and dancing. The Mechi Festival reflects the deep connection between local culture, the sea, and the rhythms of nature.</p></div>
           </details>
+          <a class="chapter-watch" data-watch="S7nfXPFk0f0" href="https://www.youtube.com/watch?v=S7nfXPFk0f0"><span aria-hidden="true">▶</span> Watch video</a>
         </div>
       </article><article id="environment" class="topic" data-group="Nature">
         <img class="topic-image" src="img/environment.jpg" alt="Environmental issues in Timor Leste" loading="lazy">
@@ -267,11 +284,9 @@
           sustainable land management programs. It cooperates with international organizations to plant trees, restore
           watersheds, and educate farmers about soil conservation techniques. Environmental laws have also been
           introduced to regulate logging and promote responsible resource use. Although the country still faces economic
-          challenges, these efforts aim to create a more sustainable future.</p><div class="video-tools">
-          <button class="js-only outline" type="button" data-video="2wg4wg-wRMg" data-title="Environment video">▶ Play video here</button>
-          <a href="https://www.youtube.com/watch?v=2wg4wg-wRMg">Watch on YouTube ↗</a>
-        </div></div>
+          challenges, these efforts aim to create a more sustainable future.</p></div>
           </details>
+          <a class="chapter-watch" data-watch="2wg4wg-wRMg" href="https://www.youtube.com/watch?v=2wg4wg-wRMg"><span aria-hidden="true">▶</span> Watch video</a>
         </div>
       </article>
       </div>
@@ -280,28 +295,50 @@
     <section id="Map" class="section map-section" aria-labelledby="map-title">
       <div class="shell map-layout">
         <div class="section-head">
-          <p class="eyebrow">02 / Geography</p>
+          <p class="eyebrow">03 / Geography</p>
           <h2 id="map-title">Find your bearings.</h2>
           <p>Start in Dili, then explore the offshore island of Ataúro or head east toward Jaco Island.</p>
-          <div class="filters js-only" id="map-places" role="group" aria-label="Choose a location">
-            <button type="button" data-place="Dili, Timor-Leste" aria-pressed="true">Dili</button>
-            <button type="button" data-place="Ataúro Island, Timor-Leste" aria-pressed="false">Ataúro</button>
-            <button type="button" data-place="Jaco Island, Timor-Leste" aria-pressed="false">Jaco Island</button>
-          </div>
+
         </div>
         <div class="map-panel">
-          <div id="map-canvas" class="map-canvas">
-            <button type="button" id="load-map" class="js-only button primary">Load interactive map</button>
-            <noscript><p>Open the map using the link below.</p></noscript>
+          <div class="map-art">
+            <svg viewBox="0 0 760 460" aria-hidden="true" focusable="false">
+              <defs>
+                <pattern id="map-grid" width="84" height="85" patternUnits="userSpaceOnUse"><path d="M84 0H0V85" fill="none" stroke="#a8d2ca" opacity=".24"/></pattern>
+                <linearGradient id="map-water" x2="0" y2="1"><stop stop-color="#154f57"/><stop offset="1" stop-color="#0d3039"/></linearGradient>
+              </defs>
+              <rect width="760" height="460" fill="url(#map-water)"/>
+              <rect width="760" height="460" fill="url(#map-grid)"/>
+              <path d="M207.6 389.3 L63.8 426.7 L43.7 406.3 L58.8 348.5 L131.0 244.8 L297.1 177.3 L314.2 210.8 L317.3 262.3 L207.6 389.3 Z" fill="#6f927f" stroke="#b1c4a0" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M297.1 177.3 L316.9 137.2 L461.5 99.0 L578.7 93.2 L631.2 72.0 L694.8 93.0 L633.0 139.1 L457.9 213.5 L317.3 262.3 L314.2 210.8 L297.1 177.3 Z" fill="#c6ac70" stroke="#ffe6a8" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M399 56l4 -2 4 7 -1 12 -4 4 -4 -8z" fill="#ffe6a8"/>
+              <path d="M175 227l22 -11 8 16 -16 12z" fill="#c6ac70" stroke="#ffe6a8"/>
+              <text x="118" y="266" class="map-land-label" transform="rotate(-23 118 266)">WEST TIMOR</text>
+              <text x="401" y="163" class="map-land-label" transform="rotate(-12 401 163)">TIMOR-LESTE</text>
+              <text x="462" y="328" class="map-sea-label">TIMOR SEA</text>
+              <g transform="translate(684 348)" stroke="#eaf5ef" fill="none" stroke-width="2"><path d="M0 38V0m-7 11L0 0l7 11"/><text x="0" y="-11" text-anchor="middle" stroke="none" fill="#eaf5ef">N</text></g>
+            </svg>
+            <div class="map-pins js-only" role="group" aria-label="Map destinations">
+              <button type="button" class="map-pin" style="--x:52.469%; --y:26.187%;" data-place="Dili, Timor-Leste" data-note="Timor-Leste’s capital sits on the north coast of Timor Island." aria-label="Dili" aria-pressed="true"><span class="pin-dot">1</span><span class="pin-label">Dili</span></button>
+              <button type="button" class="map-pin" style="--x:52.611%; --y:14.413%;" data-place="Ataúro Island, Timor-Leste" data-note="This island lies across the water, directly north of Dili." aria-label="Ataúro" aria-pressed="false"><span class="pin-dot">2</span><span class="pin-label">Ataúro</span></button>
+              <button type="button" class="map-pin" style="--x:91.171%; --y:21.390%;" data-place="Jaco Island, Timor-Leste" data-note="Jaco lies just off the eastern tip of Timor Island, near Tutuala." aria-label="Jaco Island" aria-pressed="false"><span class="pin-dot">3</span><span class="pin-label">Jaco</span></button>
+            </div>
+            <noscript><p class="map-nojs">Featured destinations include Dili, Ataúro, and Jaco Island.</p></noscript>
           </div>
-          <div class="map-caption"><strong id="map-label" aria-live="polite">Dili, Timor-Leste</strong><a id="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Dili%2C%20Timor-Leste">Open in Google Maps ↗</a></div>
+          <div class="map-caption">
+            <div class="map-destination" aria-live="polite"><strong id="map-label">Dili, Timor-Leste</strong><p id="map-note">Timor-Leste’s capital sits on the north coast of Timor Island.</p></div>
+            <div class="map-actions"><button type="button" id="load-map" class="js-only button primary" aria-expanded="false" aria-controls="map-canvas">Open zoomable map</button>
+              <a id="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Dili%2C%20Timor-Leste">Google Maps</a></div>
+          </div>
+          <div id="map-canvas" class="map-canvas" hidden></div>
+          <p class="map-credit">Simplified overview · <a href="https://github.com/johan/world.geo.json">Outline data</a></p>
         </div>
       </div>
     </section>
 
     <section id="quiz" class="shell section" aria-labelledby="quiz-title">
       <div class="section-head">
-        <p class="eyebrow">03 / Quick quiz</p>
+        <p class="eyebrow">04 / Quick quiz</p>
         <h2 id="quiz-title">What do you remember?</h2>
         <p>Try three questions from the guide and check your answers.</p>
       </div>
